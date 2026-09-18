@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Instrucciones de entrada y salida</title>
+</head>
+<body>
+
+    <h1>01 - Instrucciones de entrada y salida</h1>
+    <p id="mensaje"></p>
+    <!-- 01 - Instrucciones de entrada y salida -->
+    <script>
+        // Salidas
+            alert("Hola"); // = window.alert()
+            // pertenece al window (objeto por defecto)
+
+            // #TODO this should rewrite the page ??? instead it puts at the end of the page, as pushed at the end of the script
+            document.write("<p>Escribiendo en la pantalla</p>");
+
+            // DOM
+            let textoMensaje = "Hola Mundo";
+            let mensaje = document.getElementById("mensaje");
+            mensaje.textContent = "yo";
+            
+            // consola
+            console.log("Consola");
+            
+        // Entradas    
+        let entrada1 = prompt("Introduzca un nùmero");       
+        console.log("entrada1:" + entrada1 + 1);
+        //console.log(1 + entrada1); is this the same? #TODO
+
+        // por defecto es string
+        let entrada2 = prompt("Introduzca un nùmero flotante");       
+        console.log("entrada2 " + typeof entrada2);
+        
+        // numero a string
+        // #TODO add here parseInt
+        let entrada3 = +prompt("Introduzca algo");
+        if (typeof parseInt(entrada3) === "number") {
+            console.log("Un numero " + entrada3)
+        }  else {
+
+            console.log("No se puede utilizar el operador + en un string numerico: " + entrada3);
+        }
+
+        // confirm
+        let booleano = prompt("Sì o no?");
+        console.log(booleano);
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como declarar variables?</title>
+</head>
+<body>
+    <h1>Como declarar variables?</h1>
+    <p>
+        add here declarar and asignar
+    </p>
+
+    <script>
+
+
+
+        // versiòn anterior
+        var persona1 = "Maria";
+        console.log("var es global: " + window.persona1);
+
+        // ES6
+        let persona2 = "Joel";
+        const constante = "Oficio";
+
+        persona3 = "Pedro"; // is this attached to the window?
+
+        if (true) {
+            console.log("en el if: ");
+            console.log("\t var decalarada afuera del bloque: " + persona1);
+            console.log("\t let decalarada afuera del bloque: " + persona2);
+            console.log(`\t afuera del bloque: persona3 = "Pedro": " + ${persona3}`);
+        }
+
+        if (true) {
+            console.log ("");
+            var persona1Bloque = "Maria (bloque)" ;
+            let persona2Bloque = "Joel (bloque)" ;
+            persona3Bloque = "Pedro (bloque)" ;
+        }
+        console.log("\t var (declara en bloque): " + persona1Bloque);
+        console.log(`persona3Bloque = "Pedro (bloque):  ${persona3Bloque}`);
+        console.log("\t let (declara en bloque): " + persona2Bloque);
+        
+
+        console.log("-----------");
+
+    </script>
+    
+</body>
+</html>
